@@ -1,0 +1,23 @@
+
+create table dbo.tb_Member
+(
+	idx int identity(1,1) primary key not null,
+	tid nvarchar(20) default '',
+	tname nvarchar(20) default '',
+	tpassword nvarchar(20) default '',
+	taddress nvarchar(80) default '',
+	tphone nvarchar(15) default '',
+	tdate datetime default getdate(),
+	ttimepay int default 0,
+	tuse int default 0 --사용0 삭제1
+)
+
+create table dbo.tb_workrecord
+(
+	idx int identity(1,1) primary key not null,
+	tid nvarchar(20) default '',
+	tonwork nvarchar(20) default '',
+	toffwork nvarchar(20) default '',
+	tworktime int default 0,
+	tuse int default 0 --미지급0 지급1
+)

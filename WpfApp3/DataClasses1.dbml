@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MYDB" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-LI6QH4Q;Initial Catalog=MYDB;Integrated Security=True" SettingsObjectName="WpfApp3.Properties.Settings" SettingsPropertyName="MYDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.member" Member="member">
+    <Type Name="member">
+      <Column Name="ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NAME" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PASSWORD" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PHONE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ADDRESS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DATE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TIMEPAY" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.workrecord" Member="workrecord">
+    <Type Name="workrecord">
+      <Column Name="ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ONWORK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OFFWORK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WORKTIME" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

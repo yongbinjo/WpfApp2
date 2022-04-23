@@ -1,0 +1,87 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="224*"/>
+            <ColumnDefinition Width="71*"/>
+            <ColumnDefinition Width="197*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <DataGrid x:Name="datagrid" IsReadOnly="True" AutoGenerateColumns="False" Background="White" FontFamily="Malgun Gothic" FontSize="13" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="아이디" Binding="{Binding Path=아이디}" Width="80"/>
+                        <DataGridTextColumn Header="출근시간" Binding="{Binding Path=출근시간}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnOnwork" Grid.Column="0" Width="100" Height="40" Margin="20" Content="출근등록" FontFamily="휴먼굵은팸체" FontSize="20" Background="White" BorderBrush="White" Click="BtnOnwork_Click"/>
+                <Button x:Name="btnOffwork" Grid.Column="2" Width="100" Height="40" Content="퇴근등록" FontFamily="휴먼굵은팸체" FontSize="20" Background="White" BorderBrush="White" Click="BtnOffwork_Click"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="btnNewmember" Grid.Row="0" Click="BtnNewmember_Click"  Background="White" BorderBrush="White">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="/wpfapp3;component/images/add.png"></Image>
+                    <TextBlock Grid.Column="1" Text="직원등록" FontFamily="휴먼굵은팸체" FontSize="30" VerticalAlignment="Center" />
+
+                </Grid>
+            </Button>
+            <Button x:Name="btnManagement" Grid.Row="1" Click="btnManagement_Click" Background="White" BorderBrush="White">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="/wpfapp3;component/images/id-card.png"></Image>
+                    <TextBlock Grid.Column="1" Text="직원관리" FontFamily="휴먼굵은팸체" FontSize="30" VerticalAlignment="Center" />
+                </Grid>
+            </Button>
+            <Button x:Name="btnSearch" Grid.Row="2"  Click="btnSearch_Click" Background="White" BorderBrush="White">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="/wpfapp3;component/images/magnifier.png" HorizontalAlignment="Left"></Image>
+                    <TextBlock Grid.Column="1" Text="출근시간검색" FontFamily="휴먼굵은팸체" FontSize="30" VerticalAlignment="Center" />
+                </Grid>
+            </Button>
+            <Button x:Name="btnRecord" Grid.Row="3" Click="BtnRecord_Click" Background="White" BorderBrush="White">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="/wpfapp3;component/images/timetable.png" ></Image>
+                    <TextBlock Grid.Column="1" Text="출근기록" FontFamily="휴먼굵은팸체" FontSize="30" VerticalAlignment="Center" />
+                </Grid>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
